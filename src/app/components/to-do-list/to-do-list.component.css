@@ -1,0 +1,33 @@
+.input{
+    display: flex;
+}
+
+.Todo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: 1px solid;
+    width: 75%;    
+
+}
+.list-buttons{
+    display: flex;
+    flex-direction: column;
+
+}
+.text{
+    display: flex;
+    align-items: center;
+    
+}
+.completed{
+    width: 50%;
+    background-color: green;
+}
+.postponed{
+    background-color: yellow;
+}
+.normal{
+    width: 50%;
+    background-color: white;
+}

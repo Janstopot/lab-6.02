@@ -1,0 +1,22 @@
+
+<div class="input"> 
+    <input type="text" placeholder="Write a new To Do" [(ngModel)]="name">
+    <button (click)="createToDo()" *ngIf="name.length > 1" >SUBMIT TODO</button>
+</div>
+
+<div  *ngFor="let item of todoList ; let i = index">
+    <div *ngIf="!item.postponed" class="Todo">
+        <div [ngClass]="getClass(i)">
+            {{item.name}}
+        </div>
+        <div class="list-buttons">
+            <button (click)="postponeToDo(i)"> Postpone </button> 
+            <button (click)="completeToDo(i)">Completed</button>
+        </div> 
+    </div>
+</div>
+
+<div class="actions">
+    <button (click)="clearCompleted()">Clear Completed To Do</button>
+    <button (click)="restoreToDos()">Restore postponed To Do</button>
+</div>
